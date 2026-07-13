@@ -5,7 +5,6 @@ import Shop from './pages/Shop';
 import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
-import './App.css';
 
 export default function App() {
   return (
