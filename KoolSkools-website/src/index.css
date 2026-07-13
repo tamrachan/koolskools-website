@@ -1,44 +1,120 @@
-#root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
+@import "tailwindcss";
+
+/* Koolskools Website Stylesheet
+
+ * Use: in Tailwind's utility classes, you can use these tokens as values for colors, e.g.
+
+ *   <div class="bg-bg text-heading font-quote">Hello World</div>
+
+ * You can also use them in your own custom CSS, e.g.
+
+ *   .my-class {
+ *     color: var(--color-heading);
+ *     background-color: var(--color-accent);
+ *   }
+
+ * Ensure that all styling uses these tokens so that the theme can be modified easily in the future.
+ * To use a new colour, add it to the @theme block and use it like any other token.
+ */
+
+@theme {
+  /* Fonts */
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-heading: "Itim", "Figtree", sans-serif;
+  --font-quote: "Quote Note", cursive;
+
+  /* Neutral */
+  --color-bg: #f4f1e7; /* light cream */
+  --color-surface: #faf8f2; /* off-white */
+  --color-border: #323338; /* dark gray */
+  --color-heading: #0f0b01; /* black */
+  --color-body: #211f1b; /* dark gray */
+  --color-inactive: #676879; /* medium gray */
+  --color-muted: #e0e0e0; /* very light gray with a warm tint */
+
+  /* Accent */
+  --color-accent: #1b3f78; /* navy blue */
+  --color-accent-dark: #181b34; /* dark navy blue */
+  --color-accent-light: #1f76c2; /* light blue */
+  --color-accent-subtle: #cce4ff; /* very light blue */
+
+  /* Extra */
+  --color-teal: #39bbc7; /* teal */
+  --color-sky: #579bec; /* sky blue */
+  --color-rose: #e15674; /* rose */
+  --color-sand: #fac552; /* sand */
+  --color-green: #62a044; /* green */
+
+  /* Traffic light 
+   * Status indicators uniquely for actions. Avoid using these decoratively.
+   * Ensure that shape and text are also used to convey meaning for accessibility.
+   */
+  --color-success: #406e2c; /* dark green */
+  --color-warning: #b45309; /* dark yellow */
+  --color-error: #d7263d; /* dark red */
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree/Figtree-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Itim";
+  src: url("./assets/fonts/Itim/Itim-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quote Note";
+  src: url("./assets/fonts/Quote Note/quotenoteDEMO.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+/* Utility for edge-to-edge width. #root constrains to 1126px:
+  Re-constrain any inner content manually where needed. */
+@utility full-bleed {
+  width: 100vw;
+  margin-inline: calc(50% - 50vw);
 }
 
 body {
   margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-body);
+  font-family: var(--font-body);
 }
 
-h1,
-h2 {
-  font-family: var(--heading);
-  font-weight: 500;
-  color: var(--text-h);
-}
-
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-p {
-  margin: 0;
+#root {
+  width: 100%;
+  max-width: 1126px;
+  margin-inline: auto;
+  padding-inline: 2.5rem;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }

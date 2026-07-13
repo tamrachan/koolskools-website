@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import '../css/NavBar.css';
+import { FaBasketShopping } from 'react-icons/fa6';
+import logo from '../assets/logo.png';
 
 const navLinks = [
   { label: 'Home', to: '/' },
@@ -14,36 +15,62 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="navbar">
-      <NavLink to="/" className="navbar-logo">
-        Kool<span>Skools</span>
-      </NavLink>
+    <nav className="full-bleed sticky top-0 z-100 border-b-2 border-muted bg-surface">
+      <div className="mx-auto flex h-20 w-full max-w-[1126px] items-center justify-between px-10 md:justify-start md:gap-10">
+        <NavLink to="/" className="self-start">
+          <img src={logo} alt="Koolskools" className="h-26 max-md:h-22 w-auto" />
+        </NavLink>
 
-      <button
-        className="navbar-toggle"
-        aria-label="Toggle navigation"
-        aria-expanded={menuOpen}
-        onClick={() => setMenuOpen((prev) => !prev)}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
+        <ul
+          className={`
+            m-0 flex list-none gap-4 p-0 max-md:absolute max-md:inset-x-0 max-md:top-20
+            max-md:flex-col max-md:border-b-2 max-md:border-muted max-md:bg-surface
+            max-md:px-4 max-md:py-3 ${menuOpen ? 'max-md:flex' : 'max-md:hidden'}
+          `}
+        >
+          {navLinks.map(({ label, to }) => (
+            <li key={label}>
+              <NavLink
+                to={to}
+                end={to === '/'}
+                className={({ isActive }) =>
+                  `block rounded-md px-4 py-2 text-md font-semibold no-underline transition-colors hover:bg-accent hover:text-bg ${
+                    isActive ? 'bg-accent text-bg' : 'text-heading'
+                  }`
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
 
-      <ul className={`navbar-links${menuOpen ? ' open' : ''}`}>
-        {navLinks.map(({ label, to }) => (
-          <li key={label}>
-            <NavLink
-              to={to}
-              end={to === '/'}
-              className={({ isActive }) => (isActive ? 'active' : undefined)}
-              onClick={() => setMenuOpen(false)}
-            >
-              {label}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
+        <div className="flex items-center gap-2 md:ml-auto">
+          <NavLink
+            to="/basket"
+            aria-label="Basket"
+            className={({ isActive }) =>
+              `flex items-center rounded-md p-2 text-2xl transition-colors hover:bg-accent hover:text-bg ${
+                isActive ? 'bg-accent text-bg' : 'text-heading'
+              }`
+            }
+          >
+            <FaBasketShopping />
+          </NavLink>
+
+          <button
+            className="flex cursor-pointer flex-col gap-[5px] border-none bg-transparent p-1 max-md:flex md:hidden"
+            aria-label="Toggle navigation"
+            aria-expanded={menuOpen}
+            onClick={() => setMenuOpen((prev) => !prev)}
+          >
+            <span className="block h-0.5 w-6 rounded-md bg-accent transition" />
+            <span className="block h-0.5 w-6 rounded-md bg-accent transition" />
+            <span className="block h-0.5 w-6 rounded-md bg-accent transition" />
+          </button>
+        </div>
+      </div>
     </nav>
   );
 }
