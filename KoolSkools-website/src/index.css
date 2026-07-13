@@ -30,6 +30,7 @@
   --color-heading: #0f0b01; /* black */
   --color-body: #211f1b; /* dark gray */
   --color-inactive: #676879; /* medium gray */
+  --color-muted: #e0e0e0; /* very light gray with a warm tint */
 
   /* Accent */
   --color-accent: #1b3f78; /* navy blue */
