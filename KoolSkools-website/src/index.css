@@ -4,7 +4,7 @@
 
  * Use: in Tailwind's utility classes, you can use these tokens as values for colors, e.g.
 
- *   <div class="bg-bg text-heading">Hello World</div>
+ *   <div class="bg-bg text-heading font-quote">Hello World</div>
 
  * You can also use them in your own custom CSS, e.g.
 
@@ -18,9 +18,14 @@
  */
 
 @theme {
+  /* Fonts */
+  --font-body: "Figtree", system-ui, sans-serif;
+  --font-heading: "Itim", "Figtree", sans-serif;
+  --font-quote: "Quote Note", cursive;
+
   /* Neutral */
   --color-bg: #f4f1e7; /* light cream */
-  --color-surface: #f6fff6; /* off-white */
+  --color-surface: #faf8f2; /* off-white */
   --color-border: #323338; /* dark gray */
   --color-heading: #0f0b01; /* black */
   --color-body: #211f1b; /* dark gray */
@@ -48,6 +53,40 @@
   --color-error: #d7263d; /* dark red */
 }
 
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree/Figtree-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("./assets/fonts/Figtree/Figtree-Italic-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 300 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Itim";
+  src: url("./assets/fonts/Itim/Itim-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Quote Note";
+  src: url("./assets/fonts/Quote Note/quotenoteDEMO.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -65,6 +104,7 @@ body {
   margin: 0;
   background-color: var(--color-bg);
   color: var(--color-body);
+  font-family: var(--font-body);
 }
 
 #root {

@@ -13,9 +13,9 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="full-bleed sticky top-0 z-100 border-b-2 border-border bg-surface">
+    <nav className="full-bleed sticky top-0 z-100 border-b-2 border-accent-subtle bg-surface">
       <div className="mx-auto flex h-20 w-full max-w-[1126px] items-center justify-between px-10 md:justify-start md:gap-10">
-        <NavLink to="/" className="text-[1.4rem] font-bold text-accent">
+        <NavLink to="/" className="font-quote text-3xl font-bold text-accent">
           Kool<span>skools</span>
         </NavLink>
 
@@ -43,7 +43,7 @@ export default function NavBar() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `block rounded-md px-4 py-2 text-md font-medium no-underline transition-colors hover:bg-accent hover:text-bg ${
+                  `block rounded-md px-4 py-2 text-md font-semibold no-underline transition-colors hover:bg-accent hover:text-bg ${
                     isActive ? 'bg-accent text-bg' : 'text-heading'
                   }`
                 }
