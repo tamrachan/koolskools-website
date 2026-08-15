@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBasketShopping } from 'react-icons/fa6';
+import { FaBars } from 'react-icons/fa6';
 import logo from '../assets/logo.png';
 
 const navLinks = [
@@ -15,7 +16,7 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="full-bleed sticky top-0 z-100 border-b-2 border-muted bg-surface">
+    <nav className="sticky top-0 z-100 border-b-2 border-muted bg-surface">
       <div className="mx-auto flex h-20 w-full max-w-[1126px] items-center justify-between px-10 md:justify-start md:gap-10">
         <NavLink to="/" className="self-start">
           <img src={logo} alt="Koolskools" className="h-26 max-md:h-22 w-auto" />
@@ -34,8 +35,8 @@ export default function NavBar() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `block rounded-md px-4 py-2 text-md font-semibold no-underline transition-colors hover:bg-accent hover:text-bg ${
-                    isActive ? 'bg-accent text-bg' : 'text-heading'
+                  `block rounded-full px-4 py-2 text-md font-semibold no-underline transition-colors hover:bg-accent hover:text-bg ${
+                    isActive ? 'bg-border text-bg' : 'text-heading'
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
@@ -60,14 +61,12 @@ export default function NavBar() {
           </NavLink>
 
           <button
-            className="flex cursor-pointer flex-col gap-[5px] border-none bg-transparent p-1 max-md:flex md:hidden"
+            className="flex cursor-pointer border-none bg-transparent p-1 max-md:flex md:hidden"
             aria-label="Toggle navigation"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((prev) => !prev)}
           >
-            <span className="block h-0.5 w-6 rounded-md bg-accent transition" />
-            <span className="block h-0.5 w-6 rounded-md bg-accent transition" />
-            <span className="block h-0.5 w-6 rounded-md bg-accent transition" />
+            <FaBars className="text-2xl" />
           </button>
         </div>
       </div>

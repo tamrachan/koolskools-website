@@ -94,11 +94,53 @@
   box-sizing: border-box;
 }
 
-/* Utility for edge-to-edge width. #root constrains to 1126px:
-  Re-constrain any inner content manually where needed. */
-@utility full-bleed {
-  width: 100vw;
-  margin-inline: calc(50% - 50vw);
+/* Physical looking buttons
+ * Hovering lifts, pressing pushes them flat
+ * The bottom edge of the shadow stays on the same line in all three states
+ * Nothing here affects layout, neighbouring content is never moved
+ */
+@utility pressable {
+  --pressable-lift: 4px;
+  --pressable-hover: 2px;
+  --pressable-shadow: var(--color-accent-dark);
+
+  /* Reserve the space the shadow occupies
+   * Trim the button's own vertical padding by the same amount if the footprint 
+   * has to stay unchanged. */
+  margin-bottom: var(--pressable-lift);
+
+  translate: 0 0;
+  box-shadow: 0 var(--pressable-lift) 0 var(--pressable-shadow);
+  transition:
+    translate 120ms ease-out,
+    box-shadow 120ms ease-out;
+
+  @media (hover: hover) {
+    &:hover {
+      translate: 0 calc(-1 * var(--pressable-hover));
+      box-shadow: 0 calc(var(--pressable-lift) + var(--pressable-hover)) 0 var(--pressable-shadow);
+    }
+  }
+
+  &:focus-visible {
+    translate: 0 calc(-1 * var(--pressable-hover));
+    box-shadow: 0 calc(var(--pressable-lift) + var(--pressable-hover)) 0 var(--pressable-shadow);
+  }
+
+  &:active {
+    translate: 0 var(--pressable-lift);
+    box-shadow: 0 0 0 var(--pressable-shadow);
+    transition-duration: 50ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &,
+    &:hover,
+    &:focus-visible,
+    &:active {
+      transition: none;
+    }
+  }
 }
 
 body {
@@ -110,9 +152,7 @@ body {
 
 #root {
   width: 100%;
-  max-width: 1126px;
   margin-inline: auto;
-  padding-inline: 2.5rem;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
