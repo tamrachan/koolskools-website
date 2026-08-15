@@ -16,7 +16,7 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-100 border-b-2 border-muted bg-bg">
+    <nav className="sticky top-0 z-100 bg-bg">
       <div className="mx-auto flex h-20 w-full max-w-[1126px] items-center justify-between px-10 md:justify-start md:gap-10">
         <NavLink to="/" className="self-start">
           <img src={logo} alt="Koolskools" className="h-26 max-md:h-22 w-auto" />
@@ -25,7 +25,7 @@ export default function NavBar() {
         <ul
           className={`
             m-0 flex list-none gap-4 p-0 max-md:absolute max-md:inset-x-0 max-md:top-20
-            max-md:flex-col max-md:border-b-2 max-md:border-muted max-md:bg-surface
+            max-md:flex-col max-md:border-b-2 max-md:bg-bg
             max-md:px-4 max-md:py-3 ${menuOpen ? 'max-md:flex' : 'max-md:hidden'}
           `}
         >
@@ -61,7 +61,7 @@ export default function NavBar() {
           </NavLink>
 
           <button
-            className="flex cursor-pointer border-none bg-transparent p-1 max-md:flex md:hidden"
+            className="flex md:hidden cursor-pointer rounded-md p-2 text-2xl transition-colors hover:bg-accent hover:text-surface"
             aria-label="Toggle navigation"
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((prev) => !prev)}

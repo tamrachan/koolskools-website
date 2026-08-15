@@ -17,7 +17,7 @@ function SchoolSearch() {
         <form
             role="search"
             onSubmit={handleSubmit}
-            className="flex w-full max-w-lg items-center gap-3 rounded-full bg-surface py-1.5 pr-1.5 pl-5 shadow-lg shadow-accent-dark/10 border-2 border-accent-subtle"
+            className="flex w-full max-w-lg items-center gap-3 rounded-full bg-surface py-1.5 pr-1.5 pl-5 shadow-lg shadow-accent-dark/10 border border-accent-subtle"
         >
             <FaMagnifyingGlass className="shrink-0 text-inactive" aria-hidden="true" />
             <label htmlFor="school-search" className="sr-only">
@@ -28,7 +28,7 @@ function SchoolSearch() {
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Type your school's name or town..."
+                placeholder="Type your school's name or town"
                 className="min-w-0 flex-1 border-none bg-transparent py-2 text-body outline-none placeholder:text-inactive"
             />
             <button
