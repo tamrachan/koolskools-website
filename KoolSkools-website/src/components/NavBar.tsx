@@ -16,7 +16,7 @@ export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-100 border-b-2 border-muted bg-surface">
+    <nav className="sticky top-0 z-100 border-b-2 border-muted bg-bg">
       <div className="mx-auto flex h-20 w-full max-w-[1126px] items-center justify-between px-10 md:justify-start md:gap-10">
         <NavLink to="/" className="self-start">
           <img src={logo} alt="Koolskools" className="h-26 max-md:h-22 w-auto" />
@@ -35,8 +35,8 @@ export default function NavBar() {
                 to={to}
                 end={to === '/'}
                 className={({ isActive }) =>
-                  `block rounded-full px-4 py-2 text-md font-semibold no-underline transition-colors hover:bg-accent hover:text-bg ${
-                    isActive ? 'bg-border text-bg' : 'text-heading'
+                  `block rounded-full px-4 py-2 text-md font-semibold no-underline transition-colors hover:bg-accent hover:text-surface ${
+                    isActive ? 'bg-border text-surface' : 'text-heading'
                   }`
                 }
                 onClick={() => setMenuOpen(false)}
@@ -52,8 +52,8 @@ export default function NavBar() {
             to="/basket"
             aria-label="Basket"
             className={({ isActive }) =>
-              `flex items-center rounded-md p-2 text-2xl transition-colors hover:bg-accent hover:text-bg ${
-                isActive ? 'bg-accent text-bg' : 'text-heading'
+              `flex items-center rounded-md p-2 text-2xl transition-colors hover:bg-accent hover:text-surface ${
+                isActive ? 'bg-accent text-surface' : 'text-heading'
               }`
             }
           >

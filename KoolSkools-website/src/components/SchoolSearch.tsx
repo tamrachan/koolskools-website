@@ -33,7 +33,7 @@ function SchoolSearch() {
             />
             <button
                 type="submit"
-                className="pressable flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-accent-dark bg-accent px-5 py-2 font-semibold text-bg"
+                className="pressable flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-accent-dark bg-accent px-5 py-2 font-semibold text-surface"
             >
                 Find shop
                 <FaArrowRight aria-hidden="true" />

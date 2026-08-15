@@ -1,0 +1,77 @@
+/** TEMPORARY
+  * palette options
+  */
+:root[data-palette='sky'] {
+    --color-bg: #7fb3e8; /* strong sky blue page */
+    --color-surface: #f8fbff; /* white cards and nav */
+    --color-border: #14202c; /* deep slate, footer */
+    --color-heading: #04101c; /* near black */
+    --color-body: #0d1b28; /* dark slate */
+    --color-inactive: #4d5f70; /* muted slate */
+    --color-muted: #dce8f4; /* pale blue grey */
+
+    --color-accent: #0e3a6e; /* deep navy, close to the logo */
+    --color-accent-dark: #06264c; /* deeper navy */
+    --color-accent-light: #17558f; /* mid blue */
+    --color-accent-subtle: #cfe4f8; /* pale fill */
+
+    --color-teal: #06454d;
+    --color-sky: #b6d8f9; /* paler band, to read against the page */
+    --color-rose: #7d1a34;
+    --color-sand: #5c3b00;
+    --color-green: #17451c;
+
+    --color-success: #1f5c26;
+    --color-warning: #7a4600;
+    --color-error: #9c1e30;
+}
+
+:root[data-palette='cornflower'] {
+    --color-bg: #a8cef2; /* soft cornflower page */
+    --color-surface: #fdfeff; /* white cards and nav */
+    --color-border: #1e2a38; /* deep slate, footer */
+    --color-heading: #0a1520; /* near black */
+    --color-body: #14202c; /* dark slate */
+    --color-inactive: #4f6172; /* muted slate */
+    --color-muted: #e0eaf4; /* pale blue grey */
+
+    --color-accent: #14487f; /* navy, close to the logo */
+    --color-accent-dark: #0a2c54; /* deeper navy */
+    --color-accent-light: #2470b8; /* mid blue */
+    --color-accent-subtle: #d8e9fa; /* pale fill */
+
+    --color-teal: #0b5a63;
+    --color-sky: #7fb3e8; /* deeper band, to read against the page */
+    --color-rose: #96223f;
+    --color-sand: #6d4a00;
+    --color-green: #1f5525;
+
+    --color-success: #21582a;
+    --color-warning: #7a4a00;
+    --color-error: #a01f33;
+}
+
+:root[data-palette='powder'] {
+    --color-bg: #cfe4f7; /* powder blue page */
+    --color-surface: #ffffff; /* white cards and nav */
+    --color-border: #202b38; /* deep slate, footer */
+    --color-heading: #08131f; /* near black */
+    --color-body: #12202d; /* dark slate */
+    --color-inactive: #52657a; /* muted slate */
+    --color-muted: #dfe9f3; /* pale blue grey */
+
+    --color-accent: #0a4fa8; /* vivid blue */
+    --color-accent-dark: #052f66; /* deep vivid blue */
+    --color-accent-light: #1a6fbe; /* bright blue */
+    --color-accent-subtle: #eaf3fd; /* near-white fill */
+
+    --color-teal: #076c78;
+    --color-sky: #8fc4f5; /* band, deeper than the page */
+    --color-rose: #a82440;
+    --color-sand: #7a5200;
+    --color-green: #256a2d;
+
+    --color-success: #26702f;
+    --color-warning: #8a5200;
+    --color-error: #a81c2f;
+}
