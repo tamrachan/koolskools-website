@@ -106,7 +106,7 @@
     --color-error: #9c2033;
 }
 
-:root[data-palette='"White-Accents"'] {
+:root[data-palette='White-Accents'] {
     /* White page, light blue reserved for accents/cards — best contrast */
     --color-bg: #ffffff;
     --color-surface: #ffffff;    
