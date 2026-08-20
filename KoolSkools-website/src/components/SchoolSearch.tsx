@@ -29,13 +29,14 @@ function SchoolSearch() {
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
                 placeholder="Type your school's name or town"
-                className="min-w-0 flex-1 border-none bg-transparent py-2 text-body outline-none placeholder:text-inactive"
+                className="min-w-0 flex-1 border-none bg-transparent py-2 text-body outline-none placeholder:text-xs placeholder:text-inactive sm:placeholder:text-sm md:placeholder:text-base"
             />
             <button
                 type="submit"
+                aria-label="Find shop"
                 className="pressable flex shrink-0 cursor-pointer items-center gap-2 rounded-full border border-accent-dark bg-accent px-5 py-2 font-semibold text-surface"
             >
-                Find shop
+                <span className="hidden sm:inline">Find Shop</span>
                 <FaArrowRight aria-hidden="true" />
             </button>
         </form>
