@@ -1,0 +1,47 @@
+{
+  "SchoolName": "Fernhill High School",
+  "ShopItems": [
+    {
+      "ItemName": "Fernhill Sixth Form Jumper",
+      "ItemPrice": 25.99,
+      "ItemDescription": "Premium quarter-zip jumper reserved for sixth form students, with an embroidered 'Sixth Form' wordmark.",
+      "ItemImages": ["fernhill-sixthform-jumper.jpg"],
+      "ItemSizes": ["S", "M", "L", "XL", "XXL"],
+      "ItemColours": {
+        "Bottle Green": "#0E4429",
+        "Black": "#1A1A1A"
+      }
+    },
+    {
+      "ItemName": "Fernhill Blouse",
+      "ItemPrice": 14.5,
+      "ItemDescription": "Easy-iron short-sleeve blouse in white poplin with a rounded collar and mother-of-pearl style buttons.",
+      "ItemImages": ["fernhill-blouse-white.jpg", "fernhill-blouse-collar.jpg"],
+      "ItemSizes": ["S", "M", "L", "XL"],
+      "ItemColours": {
+        "White": "#FFFFFF"
+      }
+    },
+    {
+      "ItemName": "Fernhill Games Rugby Shirt",
+      "ItemPrice": 19.0,
+      "ItemDescription": "Hard-wearing rugby shirt with reinforced collar and printed house colour panels for inter-form matches.",
+      "ItemImages": ["fernhill-rugbyshirt-green.jpg"],
+      "ItemSizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "ItemColours": {
+        "Bottle Green": "#0E4429",
+        "Gold": "#C8A24A"
+      }
+    },
+    {
+      "ItemName": "Fernhill Kilt Skirt",
+      "ItemPrice": 21.5,
+      "ItemDescription": "Tartan-patterned kilt skirt with a buckled side fastening and box-pleat construction.",
+      "ItemImages": ["fernhill-kilt-tartan.jpg"],
+      "ItemSizes": ["22\"", "24\"", "26\"", "28\"", "30\"", "32\""],
+      "ItemColours": {
+        "Green Tartan": "#0E4429"
+      }
+    }
+  ]
+}

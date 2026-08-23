@@ -1,0 +1,56 @@
+{
+  "SchoolName": "Blackthorn Academy",
+  "ShopItems": [
+    {
+      "ItemName": "Blackthorn Academy Blazer",
+      "ItemPrice": 58.5,
+      "ItemDescription": "Slim-fit blazer in black with a woven academy badge, satin inner lining and two functional front pockets.",
+      "ItemImages": ["blackthorn-blazer-black.jpg"],
+      "ItemSizes": ["28\"", "30\"", "32\"", "34\"", "36\"", "38\""],
+      "ItemColours": {
+        "Black": "#111111"
+      }
+    },
+    {
+      "ItemName": "Blackthorn Academy Tie",
+      "ItemPrice": 7.5,
+      "ItemDescription": "Slim woven tie in black and silver stripes, non-clip standard length.",
+      "ItemImages": ["blackthorn-tie.jpg"],
+      "ItemSizes": ["Standard", "Junior"],
+      "ItemColours": {
+        "Black/Silver": "#111111"
+      }
+    },
+    {
+      "ItemName": "Blackthorn PE Hoodie",
+      "ItemPrice": 21.0,
+      "ItemDescription": "Fleece-lined hoodie with kangaroo pocket and printed academy crest, used for outdoor PE sessions.",
+      "ItemImages": ["blackthorn-hoodie-grey.jpg", "blackthorn-hoodie-back.jpg"],
+      "ItemSizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "ItemColours": {
+        "Charcoal": "#333333",
+        "Silver Grey": "#C0C0C0"
+      }
+    },
+    {
+      "ItemName": "Blackthorn Academy Trousers",
+      "ItemPrice": 23.5,
+      "ItemDescription": "Slim-tapered black trousers with a durable stretch-weave fabric suited for all-day wear.",
+      "ItemImages": ["blackthorn-trousers-black.jpg"],
+      "ItemSizes": ["24W", "26W", "28W", "30W", "32W", "34W", "36W"],
+      "ItemColours": {
+        "Black": "#111111"
+      }
+    },
+    {
+      "ItemName": "Blackthorn Sports Socks (3-Pack)",
+      "ItemPrice": 6.75,
+      "ItemDescription": "Cushioned ankle socks with a woven silver stripe, sold in packs of three for PE and games.",
+      "ItemImages": ["blackthorn-socks.jpg"],
+      "ItemSizes": ["Junior (UK 9-2)", "Adult (UK 3-8)", "Adult (UK 9-12)"],
+      "ItemColours": {
+        "Black/Silver": "#111111"
+      }
+    }
+  ]
+}

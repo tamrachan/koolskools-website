@@ -1,0 +1,56 @@
+{
+  "SchoolName": "St. Aldric's Primary School",
+  "ShopItems": [
+    {
+      "ItemName": "St. Aldric's Cardigan",
+      "ItemPrice": 16.0,
+      "ItemDescription": "Soft knitted button-up cardigan in bottle green, embroidered with the school's small owl emblem.",
+      "ItemImages": ["staldrics-cardigan-green.jpg"],
+      "ItemSizes": ["3-4 yrs", "5-6 yrs", "7-8 yrs", "9-10 yrs", "11-12 yrs"],
+      "ItemColours": {
+        "Bottle Green": "#0B4331"
+      }
+    },
+    {
+      "ItemName": "St. Aldric's Polo Shirt (Twin Pack)",
+      "ItemPrice": 11.5,
+      "ItemDescription": "Pack of two easy-care cotton polo shirts with embroidered owl emblem, ideal for everyday wear.",
+      "ItemImages": ["staldrics-polo-white-pack.jpg", "staldrics-polo-detail.jpg"],
+      "ItemSizes": ["3-4 yrs", "5-6 yrs", "7-8 yrs", "9-10 yrs", "11-12 yrs"],
+      "ItemColours": {
+        "White": "#FFFFFF"
+      }
+    },
+    {
+      "ItemName": "St. Aldric's Pinafore Dress",
+      "ItemPrice": 18.25,
+      "ItemDescription": "Classic A-line pinafore dress in green gingham, with an adjustable waist and two front pockets.",
+      "ItemImages": ["staldrics-pinafore-gingham.jpg"],
+      "ItemSizes": ["3-4 yrs", "5-6 yrs", "7-8 yrs", "9-10 yrs", "11-12 yrs"],
+      "ItemColours": {
+        "Green Gingham": "#4C8C5D"
+      }
+    },
+    {
+      "ItemName": "St. Aldric's Book Bag",
+      "ItemPrice": 9.99,
+      "ItemDescription": "Small padded book bag sized for young pupils, with a clear name label pocket on the front.",
+      "ItemImages": ["staldrics-bookbag-green.jpg"],
+      "ItemSizes": ["One Size"],
+      "ItemColours": {
+        "Bottle Green": "#0B4331",
+        "Red": "#B22222"
+      }
+    },
+    {
+      "ItemName": "St. Aldric's Waterproof Coat",
+      "ItemPrice": 27.0,
+      "ItemDescription": "Fully waterproof coat with a fleece-lined hood and reflective trim strips, for outdoor playtime in all weather.",
+      "ItemImages": ["staldrics-coat-green.jpg", "staldrics-coat-hood.jpg"],
+      "ItemSizes": ["3-4 yrs", "5-6 yrs", "7-8 yrs", "9-10 yrs", "11-12 yrs"],
+      "ItemColours": {
+        "Bottle Green": "#0B4331"
+      }
+    }
+  ]
+}
