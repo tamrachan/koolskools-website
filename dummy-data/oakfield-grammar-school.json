@@ -1,0 +1,57 @@
+{
+  "SchoolName": "Oakfield Grammar School",
+  "ShopItems": [
+    {
+      "ItemName": "Oakfield Crested Blazer",
+      "ItemPrice": 54.99,
+      "ItemDescription": "Navy wool-blend blazer with embroidered Oakfield Grammar School crest on the breast pocket. Fully lined with a brushed twill interior.",
+      "ItemImages": ["oakfield-blazer-front.jpg", "oakfield-blazer-crest.jpg"],
+      "ItemSizes": ["26\"", "28\"", "30\"", "32\"", "34\"", "36\""],
+      "ItemColours": {
+        "Navy": "#1B2A4A"
+      }
+    },
+    {
+      "ItemName": "Oakfield V-Neck Jumper",
+      "ItemPrice": 22.5,
+      "ItemDescription": "Machine-washable knitted V-neck jumper in house maroon, woven with a single thin gold stripe at the trim.",
+      "ItemImages": ["oakfield-jumper-maroon.jpg"],
+      "ItemSizes": ["XS", "S", "M", "L", "XL"],
+      "ItemColours": {
+        "Maroon": "#6E1423",
+        "Bottle Green": "#0B3D2E"
+      }
+    },
+    {
+      "ItemName": "Oakfield Striped Tie",
+      "ItemPrice": 8.0,
+      "ItemDescription": "Polyester clip-on tie in diagonal navy and gold stripes, standard length for years 7-13.",
+      "ItemImages": ["oakfield-tie.jpg"],
+      "ItemSizes": ["Standard", "Junior"],
+      "ItemColours": {
+        "Navy/Gold": "#1B2A4A"
+      }
+    },
+    {
+      "ItemName": "Oakfield PE Polo Shirt",
+      "ItemPrice": 15.25,
+      "ItemDescription": "Breathable polyester sports polo with printed school logo, designed for PE and games lessons.",
+      "ItemImages": ["oakfield-pe-polo-white.jpg", "oakfield-pe-polo-back.jpg"],
+      "ItemSizes": ["XS", "S", "M", "L", "XL", "XXL"],
+      "ItemColours": {
+        "White": "#FFFFFF",
+        "Maroon": "#6E1423"
+      }
+    },
+    {
+      "ItemName": "Oakfield Pleated Skirt",
+      "ItemPrice": 19.99,
+      "ItemDescription": "Knife-pleat skirt in charcoal grey with an adjustable elasticated waistband, knee-length fit.",
+      "ItemImages": ["oakfield-skirt-grey.jpg"],
+      "ItemSizes": ["22\"", "24\"", "26\"", "28\"", "30\""],
+      "ItemColours": {
+        "Charcoal Grey": "#3A3B3C"
+      }
+    }
+  ]
+}

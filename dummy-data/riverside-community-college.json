@@ -1,0 +1,47 @@
+{
+  "SchoolName": "Riverside Community College",
+  "ShopItems": [
+    {
+      "ItemName": "Riverside Zip-Up Sweatshirt",
+      "ItemPrice": 17.75,
+      "ItemDescription": "Soft-touch fleece-lined zip sweatshirt with embroidered college logo on the left chest.",
+      "ItemImages": ["riverside-sweatshirt-royal.jpg"],
+      "ItemSizes": ["S", "M", "L", "XL"],
+      "ItemColours": {
+        "Royal Blue": "#1D4E9B",
+        "Grey Marl": "#8C8C8C"
+      }
+    },
+    {
+      "ItemName": "Riverside Check Trousers",
+      "ItemPrice": 24.0,
+      "ItemDescription": "Regular-fit trousers with a subtle grey check pattern, durable stain-resistant fabric.",
+      "ItemImages": ["riverside-trousers-check.jpg", "riverside-trousers-detail.jpg"],
+      "ItemSizes": ["24W", "26W", "28W", "30W", "32W", "34W"],
+      "ItemColours": {
+        "Grey Check": "#6D6E71"
+      }
+    },
+    {
+      "ItemName": "Riverside Sports Shorts",
+      "ItemPrice": 12.5,
+      "ItemDescription": "Lightweight quick-dry shorts with an internal drawstring waist, used for PE and athletics.",
+      "ItemImages": ["riverside-shorts-navy.jpg"],
+      "ItemSizes": ["XS", "S", "M", "L", "XL"],
+      "ItemColours": {
+        "Navy": "#14213D",
+        "Royal Blue": "#1D4E9B"
+      }
+    },
+    {
+      "ItemName": "Riverside Book Bag",
+      "ItemPrice": 13.99,
+      "ItemDescription": "Durable canvas book bag with the college crest printed on the front flap and a reinforced base.",
+      "ItemImages": ["riverside-bookbag-navy.jpg"],
+      "ItemSizes": ["One Size"],
+      "ItemColours": {
+        "Navy": "#14213D"
+      }
+    }
+  ]
+}
