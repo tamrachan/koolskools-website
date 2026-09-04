@@ -1,0 +1,159 @@
+/** TEMPORARY
+  * palette options
+  */
+:root[data-palette='sky'] {
+    --color-bg: #7fb3e8; /* strong sky blue page */
+    --color-surface: #f8fbff; /* white cards and nav */
+    --color-border: #14202c; /* deep slate, footer */
+    --color-heading: #04101c; /* near black */
+    --color-body: #0d1b28; /* dark slate */
+    --color-inactive: #4d5f70; /* muted slate */
+    --color-muted: #dce8f4; /* pale blue grey */
+
+    --color-accent: #0e3a6e; /* deep navy, close to the logo */
+    --color-accent-dark: #06264c; /* deeper navy */
+    --color-accent-light: #17558f; /* mid blue */
+    --color-accent-subtle: #cfe4f8; /* pale fill */
+
+    --color-teal: #06454d;
+    --color-sky: #b6d8f9; /* paler band, to read against the page */
+    --color-rose: #7d1a34;
+    --color-sand: #5c3b00;
+    --color-green: #17451c;
+
+    --color-success: #1f5c26;
+    --color-warning: #7a4600;
+    --color-error: #9c1e30;
+}
+
+:root[data-palette='cornflower'] {
+    --color-bg: #a8cef2; /* soft cornflower page */
+    --color-surface: #fdfeff; /* white cards and nav */
+    --color-border: #1e2a38; /* deep slate, footer */
+    --color-heading: #0a1520; /* near black */
+    --color-body: #14202c; /* dark slate */
+    --color-inactive: #4f6172; /* muted slate */
+    --color-muted: #e0eaf4; /* pale blue grey */
+
+    --color-accent: #14487f; /* navy, close to the logo */
+    --color-accent-dark: #0a2c54; /* deeper navy */
+    --color-accent-light: #2470b8; /* mid blue */
+    --color-accent-subtle: #d8e9fa; /* pale fill */
+
+    --color-teal: #0b5a63;
+    --color-sky: #7fb3e8; /* deeper band, to read against the page */
+    --color-rose: #96223f;
+    --color-sand: #6d4a00;
+    --color-green: #1f5525;
+
+    --color-success: #21582a;
+    --color-warning: #7a4a00;
+    --color-error: #a01f33;
+}
+
+:root[data-palette='powder'] {
+    --color-bg: #cfe4f7; /* powder blue page */
+    --color-surface: #ffffff; /* white cards and nav */
+    --color-border: #202b38; /* deep slate, footer */
+    --color-heading: #08131f; /* near black */
+    --color-body: #12202d; /* dark slate */
+    --color-inactive: #52657a; /* muted slate */
+    --color-muted: #dfe9f3; /* pale blue grey */
+
+    --color-accent: #0a4fa8; /* vivid blue */
+    --color-accent-dark: #052f66; /* deep vivid blue */
+    --color-accent-light: #1a6fbe; /* bright blue */
+    --color-accent-subtle: #eaf3fd; /* near-white fill */
+
+    --color-teal: #076c78;
+    --color-sky: #8fc4f5; /* band, deeper than the page */
+    --color-rose: #a82440;
+    --color-sand: #7a5200;
+    --color-green: #256a2d;
+
+    --color-success: #26702f;
+    --color-warning: #8a5200;
+    --color-error: #a81c2f;
+}
+
+/**
+ * New palette options
+*/
+
+:root[data-palette='Blue-Background'] {
+    /* Full light-blue page light blue accessible */
+    --color-bg: #afd9fc;         /* light blue page */
+    --color-surface: #ffffff;    /* white cards and nav */
+    --color-border: #16232f;     
+    --color-heading: #07131f;    
+    --color-body: #10202c;       
+    --color-inactive: #4b5f72;   /* muted slate, still ~4.7:1 on bg */
+    --color-muted: #e2edf7;      /* pale blue grey */
+
+    --color-accent: #0c4488;     /* navy, close to the logo */
+    --color-accent-dark: #052a5c;/* deeper navy */
+    --color-accent-light: #1c6bb0; /* mid blue */
+    --color-accent-subtle: #e6f1fc; /* pale fill */
+
+    --color-teal: #076068;
+    --color-sky: #8fc0ee;        /* deeper band, reads against the page */
+    --color-rose: #9e2140;
+    --color-sand: #6d4a00;
+    --color-green: #205a29;
+
+    --color-success: #237a2e;
+    --color-warning: #7c4c00;
+    --color-error: #9c2033;
+}
+
+:root[data-palette='White-Accents'] {
+    /* White page, light blue reserved for accents/cards — best contrast */
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;    
+    --color-border: #16232f;
+    --color-heading: #0a1723;
+    --color-body: #1c2b38;
+    --color-inactive: #55697c;
+    --color-muted: #eaf2fa;
+
+    --color-accent: #0c4488;
+    --color-accent-dark: #052a5c;
+    --color-accent-light: #1c6bb0;
+    --color-accent-subtle: #dcebfa;
+
+    --color-teal: #076068;
+    --color-sky: #bcdcf7;       
+    --color-rose: #9e2140;
+    --color-sand: #6d4a00;
+    --color-green: #205a29;
+
+    --color-success: #237a2e;
+    --color-warning: #7c4c00;
+    --color-error: #9c2033;
+}
+
+/* stonger blue used for accents and a gray footer */
+:root[data-palette='White-Strong-Accents'] {
+    --color-bg: #ffffff;
+    --color-surface: #ffffff;
+    --color-border: #16232f;
+    --color-heading: #0a1723;
+    --color-body: #1c2b38;
+    --color-inactive: #55697c;
+    --color-muted: #eaf2fa;
+
+    --color-accent: #0c4488;
+    --color-accent-dark: #052a5c;
+    --color-accent-light: #1c6bb0;
+    --color-accent-subtle: #bedcf7; /* stronger */
+
+    --color-teal: #076068;
+    --color-sky: #7fb3e8;        
+    --color-rose: #9e2140;
+    --color-sand: #ab8739;
+    --color-green: #205a29;
+
+    --color-success: #237a2e;
+    --color-warning: #7c4c00;
+    --color-error: #9c2033;
+}
