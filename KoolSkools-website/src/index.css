@@ -46,7 +46,7 @@
   --color-sand: #fac552; /* sand */
   --color-green: #62a044; /* green */
 
-  /* Traffic light 
+  /* Traffic light
    * Status indicators uniquely for actions. Avoid using these decoratively.
    * Ensure that shape and text are also used to convey meaning for accessibility.
    */
