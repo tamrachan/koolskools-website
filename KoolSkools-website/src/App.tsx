@@ -11,7 +11,7 @@ import Basket from './pages/Basket';
 export default function App() {
   return (
     <PasswordGate>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />

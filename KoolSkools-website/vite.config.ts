@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  /* Served from https://tamrachan.github.io/koolskools-website/ */
+  base: '/koolskools-website/',
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] }),
