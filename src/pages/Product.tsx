@@ -1,10 +1,11 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { FaCartShopping, FaChevronDown, FaPlus } from 'react-icons/fa6';
 import Breadcrumbs from '../components/Breadcrumbs';
 import GoToButton from '../components/GoToButton';
 import ProductCard from '../components/ProductCard';
 import SizeGuide from '../components/SizeGuide';
+import { useBasket } from '../context/BasketContext';
 import {
     findVariation,
     formatPrice,
@@ -152,6 +153,9 @@ function ProductDetails({ product, school }: { product: ProductData; school: Sch
         const variation = findVariation(product, initialSelection(product));
         return variation?.image_id ?? product.images[0].id;
     });
+    const [addedCount, setAddedCount] = useState(0);
+    const basket = useBasket();
+    const navigate = useNavigate();
 
     const variation = product.has_options ? findVariation(product, selection) : undefined;
     const isAvailable = product.has_options ? Boolean(variation?.is_in_stock) : product.is_in_stock;
@@ -162,6 +166,7 @@ function ProductDetails({ product, school }: { product: ProductData; school: Sch
     function selectOption(attribute: Attribute, slug: string) {
         const next = { ...selection, [attribute.name]: slug };
         setSelection(next);
+        setAddedCount(0);
         if (attribute.taxonomy === COLOUR_TAXONOMY) {
             setActiveImageId(findVariation(product, next)?.image_id ?? product.images[0].id);
         }
@@ -173,6 +178,10 @@ function ProductDetails({ product, school }: { product: ProductData; school: Sch
         const match = findVariation(product, { ...selection, [attribute.name]: term.slug });
         if (!match) return 'unavailable';
         return match.is_in_stock ? '' : 'out of stock';
+    }
+
+    function addToBasket() {
+        basket.add(product.id, variation?.id ?? null);
     }
 
     return (
@@ -245,6 +254,10 @@ function ProductDetails({ product, school }: { product: ProductData; school: Sch
                             <button
                                 type="button"
                                 disabled={!isAvailable}
+                                onClick={() => {
+                                    addToBasket();
+                                    setAddedCount(addedCount + 1);
+                                }}
                                 className="pressable flex cursor-pointer items-center gap-3 rounded-full border-2 border-border bg-surface px-6 py-3 text-lg text-heading [--pressable-shadow:var(--color-border)] disabled:cursor-not-allowed disabled:opacity-50"
                             >
                                 <FaPlus aria-hidden="true" />
@@ -253,12 +266,23 @@ function ProductDetails({ product, school }: { product: ProductData; school: Sch
                             <button
                                 type="button"
                                 disabled={!isAvailable}
+                                onClick={() => {
+                                    addToBasket();
+                                    navigate('/basket');
+                                }}
                                 className="pressable flex cursor-pointer items-center gap-3 rounded-full border-2 border-accent-dark bg-accent px-6 py-3 text-lg font-bold text-surface disabled:cursor-not-allowed disabled:opacity-50"
                             >
                                 Buy now
                                 <FaCartShopping aria-hidden="true" />
                             </button>
                         </div>
+                        <p role="status" className="mt-3 min-h-6 text-sm text-success">
+                            {addedCount > 0 && (
+                                <>
+                                    Added to basket. <Link to="/basket" className="font-bold underline">View basket</Link>
+                                </>
+                            )}
+                        </p>
                     </div>
 
                     <div>

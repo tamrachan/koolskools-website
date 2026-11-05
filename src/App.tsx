@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import PasswordGate from './components/PasswordGate';
+import { BasketProvider } from './context/BasketContext';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import SchoolShop from './pages/SchoolShop';
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <PasswordGate>
       <BrowserRouter basename={import.meta.env.BASE_URL}>
+        <BasketProvider>
         <ScrollToTop />
         <NavBar />
         <main className="flex-1">
@@ -41,6 +43,7 @@ export default function App() {
           </Routes>
         </main>
         <Footer />
+        </BasketProvider>
       </BrowserRouter>
     </PasswordGate>
   );

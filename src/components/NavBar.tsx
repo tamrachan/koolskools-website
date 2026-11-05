@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { FaBasketShopping } from 'react-icons/fa6';
 import { FaBars } from 'react-icons/fa6';
+import { useBasket } from '../context/BasketContext';
 import logo from '../assets/logo.png';
 
 const navLinks = [
@@ -14,6 +15,7 @@ const navLinks = [
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { itemCount } = useBasket();
 
   return (
     <nav className="sticky top-0 z-100 bg-bg">
@@ -50,14 +52,22 @@ export default function NavBar() {
         <div className="flex items-center gap-2 md:ml-auto">
           <NavLink
             to="/basket"
-            aria-label="Basket"
+            aria-label={itemCount > 0 ? `Basket, ${itemCount} items` : 'Basket'}
             className={({ isActive }) =>
-              `flex items-center rounded-md p-2 text-2xl transition-colors hover:bg-accent hover:text-surface ${
+              `relative flex items-center rounded-md p-2 text-2xl transition-colors hover:bg-accent hover:text-surface ${
                 isActive ? 'bg-accent text-surface' : 'text-heading'
               }`
             }
           >
             <FaBasketShopping />
+            {itemCount > 0 && (
+              <span
+                aria-hidden="true"
+                className="absolute -top-1 -right-1 flex h-5 min-w-5 items-center justify-center rounded-full border border-surface bg-accent-dark px-1 text-xs font-bold text-surface"
+              >
+                {itemCount}
+              </span>
+            )}
           </NavLink>
 
           <button
