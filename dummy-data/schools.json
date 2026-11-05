@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "General Shop",
+    "slug": "general-shop",
+    "type": "general",
+    "description": "Fairtrade garments not tied to one school.",
+    "image": null,
+    "count": 4
+  },
+  {
+    "id": 2,
+    "name": "Blackthorn Academy",
+    "slug": "blackthorn-academy",
+    "type": "school",
+    "description": "Uniform for Blackthorn Academy.",
+    "image": null,
+    "count": 5
+  },
+  {
+    "id": 3,
+    "name": "Fernhill High School",
+    "slug": "fernhill-high-school",
+    "type": "school",
+    "description": "Uniform for Fernhill High School.",
+    "image": null,
+    "count": 5
+  },
+  {
+    "id": 4,
+    "name": "Oakfield Grammar School",
+    "slug": "oakfield-grammar-school",
+    "type": "school",
+    "description": "Uniform for Oakfield Grammar School.",
+    "image": null,
+    "count": 6
+  },
+  {
+    "id": 5,
+    "name": "Riverside Community College",
+    "slug": "riverside-community-college",
+    "type": "school",
+    "description": "Uniform for Riverside Community College.",
+    "image": null,
+    "count": 5
+  },
+  {
+    "id": 6,
+    "name": "St. Aldric's Primary School",
+    "slug": "st-aldrics-primary-school",
+    "type": "school",
+    "description": "Uniform for St. Aldric's Primary School.",
+    "image": null,
+    "count": 5
+  }
+]

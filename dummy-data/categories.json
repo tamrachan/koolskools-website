@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Blazers",
+    "slug": "blazers",
+    "parent": 0,
+    "count": 2
+  },
+  {
+    "id": 2,
+    "name": "Knitwear & Sweatshirts",
+    "slug": "knitwear-sweatshirts",
+    "parent": 0,
+    "count": 5
+  },
+  {
+    "id": 3,
+    "name": "Shirts & Polos",
+    "slug": "shirts-polos",
+    "parent": 0,
+    "count": 6
+  },
+  {
+    "id": 4,
+    "name": "Trousers & Shorts",
+    "slug": "trousers-shorts",
+    "parent": 0,
+    "count": 4
+  },
+  {
+    "id": 5,
+    "name": "Skirts & Dresses",
+    "slug": "skirts-dresses",
+    "parent": 0,
+    "count": 4
+  },
+  {
+    "id": 6,
+    "name": "PE & Sportswear",
+    "slug": "pe-sportswear",
+    "parent": 0,
+    "count": 6
+  },
+  {
+    "id": 7,
+    "name": "Outerwear",
+    "slug": "outerwear",
+    "parent": 0,
+    "count": 1
+  },
+  {
+    "id": 8,
+    "name": "Bags",
+    "slug": "bags",
+    "parent": 0,
+    "count": 2
+  },
+  {
+    "id": 9,
+    "name": "Accessories",
+    "slug": "accessories",
+    "parent": 0,
+    "count": 3
+  }
+]
