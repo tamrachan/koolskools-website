@@ -28,7 +28,7 @@ function SchoolSearch() {
                 type="search"
                 value={query}
                 onChange={(event) => setQuery(event.target.value)}
-                placeholder="Type your school's name or town"
+                placeholder="Type your school's name"
                 className="min-w-0 flex-1 border-none bg-transparent py-2 text-body outline-none placeholder:text-xs placeholder:text-inactive sm:placeholder:text-sm md:placeholder:text-base"
             />
             <button
