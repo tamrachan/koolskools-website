@@ -1,3 +1,5 @@
+import goldAward from "../assets/images/goldaward.jpg";
+
 function Footer() {
     return (
         <footer className="flex flex-col bg-neutral-900 text-white px-10 py-12 text-left md:flex-row md:justify-between md:gap-10">
@@ -14,7 +16,7 @@ function Footer() {
 
                 <div className="flex gap-4">
                     <a href="[BADGE_1_LINK]">
-                        <img src="goldaward" alt="South West Fair Trade Business Awards Gold Award 2019" className="h-20 w-auto" />
+                        <img src={goldAward} alt="South West Fair Trade Business Awards Gold Award 2019" className="h-20 w-auto" />
                     </a>
                     <a href="[BADGE_2_LINK]">
                         <img src="[BADGE_2_IMAGE_SRC]" alt="[BADGE_2_ALT_TEXT]" className="h-20 w-auto" />
