@@ -16,7 +16,7 @@ Then use your computer's terminal and run the following commands:
 git clone https://github.com/tamrachan/koolskools-website
 
 # Make sure you're in the right directory
-cd koolskools-website/KoolSkools-website
+cd koolskools-website
 
 # Install the dependencies
 npm install
