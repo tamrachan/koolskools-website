@@ -7,6 +7,7 @@ import About from './pages/About';
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import Basket from './pages/Basket';
+import Themes from './pages/Themes';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="/themes" element={<Themes />} />
         </Routes>
       </BrowserRouter>
     </PasswordGate>
