@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import SchoolSearch from "../components/SchoolSearch";
 import SectionDivider from "../components/SectionDivider";
@@ -13,6 +15,14 @@ import goldAward from "../assets/images/goldaward.jpg";
 import {FaEarthEurope} from "react-icons/fa6";
 
 function Home() {
+    const { hash } = useLocation();
+
+    // React Router doesn't scroll to #anchors itself, e.g. returning from /journey to /#journey
+    useEffect(() => {
+        if (!hash) return;
+        document.getElementById(hash.slice(1))?.scrollIntoView();
+    }, [hash]);
+
     return (
         <>
             {/* Hero */}
@@ -63,7 +73,7 @@ function Home() {
             </section>
 
             {/* The Journey*/}
-            <section className="relative flex min-h-svh items-center justify-center bg-accent-subtle">
+            <section id="journey" className="relative flex min-h-svh scroll-mt-20 items-center justify-center bg-accent-subtle">
                 <SectionDivider fill="fill-accent-subtle" flip />
                 
                 <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-24">
@@ -82,7 +92,7 @@ function Home() {
             </section>
 
             {/* Join The Revolution */}
-            <section className="relative flex min-h-svh items-center justify-center bg-sky">
+            <section id="revolution" className="relative flex min-h-svh scroll-mt-20 items-center justify-center bg-sky">
                 <SectionDivider fill="fill-sky" />
                 <div className="relative flex w-full max-w-3xl flex-col items-center"> 
                     <div className="relative flex w-full max-w-xl items-center justify-center"> 
