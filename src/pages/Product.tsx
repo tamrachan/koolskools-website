@@ -4,6 +4,7 @@ import { FaCartShopping, FaChevronDown, FaPlus } from 'react-icons/fa6';
 import Breadcrumbs from '../components/Breadcrumbs';
 import GoToButton from '../components/GoToButton';
 import ProductCard from '../components/ProductCard';
+import SizeGuide from '../components/SizeGuide';
 import {
     findVariation,
     formatPrice,
@@ -20,6 +21,7 @@ import {
 } from '../data/shop';
 
 const COLOUR_TAXONOMY = 'pa_colour';
+const SIZE_GUIDE_TAXONOMIES = ['pa_size', 'pa_shorts-size'];
 
 function initialSelection(product: ProductData): Selection {
     const variation = product.variations.find((candidate) => candidate.is_in_stock) ?? product.variations[0];
@@ -65,6 +67,7 @@ type OptionPickerProps = {
 
 function SizePicker({ attribute, value, statusOf, onChange }: OptionPickerProps) {
     const id = `attribute-${attribute.id}`;
+    const showGuide = SIZE_GUIDE_TAXONOMIES.includes(attribute.taxonomy);
 
     return (
         <div>
@@ -93,6 +96,7 @@ function SizePicker({ attribute, value, statusOf, onChange }: OptionPickerProps)
                         <FaChevronDown />
                     </span>
                 </div>
+                {showGuide && <SizeGuide />}
             </div>
         </div>
     );
