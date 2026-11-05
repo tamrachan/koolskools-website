@@ -8,7 +8,7 @@ import handsImage from "../assets/images/hands_IMG_8681.jpeg";
 import aboutImage from "../assets/images/school_IMG_8175.jpeg";
 import thirdImage from "../assets/images/IMG_9114.jpg";
 import earthImage from "../assets/images/earth.svg";
-import heroVideo from "../assets/images/hero_video.mp4";
+import heroVideo from "../assets/images/hero_video.webm";
 import {FaEarthEurope} from "react-icons/fa6";
 
 function Home() {
