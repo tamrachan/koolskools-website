@@ -63,28 +63,31 @@ function Carousel({ images, children, label = 'Highlights', className = '' }: Ca
             role="region"
             aria-roledescription="carousel"
             aria-label={label}
-            className={`relative overflow-hidden ${className}`}
+            className={`relative ${className}`}
         >
-            <div
-                className="flex h-full"
-                style={{
-                    transform: `translateX(-${index * 100}%)`,
-                    transition: animated ? `transform ${TRANSITION_MS}ms ease-in-out` : 'none',
-                }}
-                onTransitionEnd={handleTransitionEnd}
-            >
-                {slides.map((image, i) => (
-                    <div
-                        key={i}
-                        role="group"
-                        aria-roledescription="slide"
-                        aria-label={`${slideNumber(i)} of ${count}`}
-                        aria-hidden={i !== index}
-                        className="h-full w-full shrink-0 *:h-full *:w-full *:object-cover"
-                    >
-                        {image}
-                    </div>
-                ))}
+            {/* Only the slides are clipped, so overlaid content like search results can overflow */}
+            <div className="h-full overflow-hidden">
+                <div
+                    className="flex h-full"
+                    style={{
+                        transform: `translateX(-${index * 100}%)`,
+                        transition: animated ? `transform ${TRANSITION_MS}ms ease-in-out` : 'none',
+                    }}
+                    onTransitionEnd={handleTransitionEnd}
+                >
+                    {slides.map((image, i) => (
+                        <div
+                            key={i}
+                            role="group"
+                            aria-roledescription="slide"
+                            aria-label={`${slideNumber(i)} of ${count}`}
+                            aria-hidden={i !== index}
+                            className="h-full w-full shrink-0 *:h-full *:w-full *:object-cover"
+                        >
+                            {image}
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-8 px-16 max-md:px-6">
