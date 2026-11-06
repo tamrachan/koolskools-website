@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "./palettes.css";
 
+/* "side" layout: room for a side panel on tablets/desktops, plus phones held landscape.
+ * Keep in sync with SIDE_QUERY in JourneyHistory.tsx */
+@custom-variant side {
+  @media (min-width: 768px), (min-width: 560px) and (orientation: landscape) {
+    @slot;
+  }
+}
+
 /* Koolskools Website Stylesheet
 
  * Use: in Tailwind's utility classes, you can use these tokens as values for colors, e.g.

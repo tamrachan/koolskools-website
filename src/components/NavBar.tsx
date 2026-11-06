@@ -11,6 +11,7 @@ const navLinks = [
   { label: 'About', to: '/about' },
   { label: 'Blog', to: '/blog' },
   { label: 'Contact', to: '/contact' },
+  { label: 'Themes', to: '/themes' },
 ];
 
 export default function NavBar() {
